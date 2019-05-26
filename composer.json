@@ -1,0 +1,22 @@
+{
+    "name": "fabricioje/son-framework",
+    "authors": [
+        {
+            "name": "Fabrício J. Silva",
+            "email": "fabricio_fx@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SON\\Framework\\": "src",
+            "App\\": "app"
+        }
+    },
+    "scripts": {
+        "server": "php -S localhost:8080 -t public"
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}
