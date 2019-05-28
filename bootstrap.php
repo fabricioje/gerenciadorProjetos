@@ -2,16 +2,14 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-new SON\Framework\Router;
-new App\Module;
+$router = new SON\Framework\Router;
 
+$router->add('GET', '/', function(){
+    return 'estamos na home';
+});
 
-$router = $_SERVER['PATH_INFO'] ?? '/';
+$router->add('GET', '/projects/(\d+)', function($paramns){
+    return 'estamos listando o projeto de id: ' . $paramns[1];
+});
 
-if ($router == '/') {
-    echo 'estamos na home';
-}elseif ($router == '/projects') {
-    echo 'estamos listando projetos';
-}else {
-    echo 'Página não entrada';
-}
+echo $router->run();
