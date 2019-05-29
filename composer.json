@@ -6,7 +6,9 @@
             "email": "fabricio_fx@hotmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "pimple/pimple": "^3.2"
+    },
     "autoload": {
         "psr-4": {
             "SON\\Framework\\": "src",

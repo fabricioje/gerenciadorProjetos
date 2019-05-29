@@ -11,6 +11,10 @@ class ComposerStaticInit55652764940d904291de75d57fc5ee2c
         array (
             'SON\\Framework\\' => 14,
         ),
+        'P' => 
+        array (
+            'Psr\\Container\\' => 14,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -22,9 +26,23 @@ class ComposerStaticInit55652764940d904291de75d57fc5ee2c
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Pimple' => 
+            array (
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
         ),
     );
 
@@ -33,6 +51,7 @@ class ComposerStaticInit55652764940d904291de75d57fc5ee2c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit55652764940d904291de75d57fc5ee2c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit55652764940d904291de75d57fc5ee2c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit55652764940d904291de75d57fc5ee2c::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
