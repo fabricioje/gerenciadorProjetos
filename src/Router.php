@@ -38,7 +38,7 @@ class Router{
 
         foreach ($this->routes[$method] as $route => $action) {
             if (preg_match($route, $url, $params)) { //preg_match verificar se tem expressão regular na variável
-                return $action($params);
+                return compact('action', 'params');
             }
         }
         
