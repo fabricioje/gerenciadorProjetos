@@ -6,10 +6,10 @@ use App\Models\Users;
 
 class UsersController{
 
-    public function show($container, $params){
+    public function show($container, $request){
 
         $user = new Users($container);
-        $data = $user->get($params[1]);
+        $data = $user->get($request->attributes->get(1));
         
         return 'estamos listando o nome de id: ' . $data['name'];
     }
