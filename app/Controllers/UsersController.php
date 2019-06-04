@@ -16,6 +16,7 @@ class UsersController{
         $id = $array[(count($array) - 1)]; //Pega a última posição do array, que é a posição que contém o número informado
 
         $user = new Users($container);
+        $user->create(['name' => 'Teste']);
         $data = $user->get($id);
         
         return 'estamos listando o nome de id: ' . $data['name'];
