@@ -1,20 +1,14 @@
 <?php
 
-$middlewares = [
-    'before' => [
-        function($c){
-            session_start();
-        },
-        function($c){
-            header('Content-Type: text/plain');
-        }
-    ],
-    'after' => [
-        function($c){
-            echo 'after';
-        },
-        function($c){
-            echo 'after 2';
-        }
-    ],
-];
+$app->addMiddleware('before', function($c){
+    session_start();
+});
+$app->addMiddleware('before', function($c){
+    header('Content-Type: text/plain');
+});
+$app->addMiddleware('before', function($c){
+    echo ' after ';
+});
+$app->addMiddleware('before', function($c){
+    echo 'after 2';
+});
