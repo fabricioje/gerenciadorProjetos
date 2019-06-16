@@ -7,6 +7,8 @@ use SON\Framework\Router;
 use SON\Framework\Response;
 use SON\Framework\Exceptions\HttpException;
 
+ini_set('display_errors', 'On');
+
 class App{
 
     private $router;
@@ -61,9 +63,9 @@ class App{
                     'code' => $c['exception']->getCode(),
                     'error' => $c['exception']->getMessage()
                 ]);
-            };
 
-            return $response;
+                return $response;
+            };            
         }
 
         return $this->container['httpErrorHandler'];
