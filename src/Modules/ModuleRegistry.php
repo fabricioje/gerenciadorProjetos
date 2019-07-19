@@ -18,4 +18,15 @@ class ModuleRegistry{
 
         $this->composer = $composer;
     }
+
+    public function add(Contract $module){
+        $this->modules[] = $module;
+    }
+
+    public function run(){
+
+        foreach($this->modules as $module){
+            //
+        }
+    }
 }
