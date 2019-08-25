@@ -11,7 +11,7 @@ $container['events'] = function(){
 $container['db'] = function(){
     $dsn = 'mysql:host=localhost;dbname=gerenciador_projetos';
     $username = 'root';
-    $password = '1234'; //No note mudar para sem senha, no pc senha 1a4
+    $password = 'root'; //No note mudar para sem senha, no pc senha 1a4
     $options = [
         \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
     ];

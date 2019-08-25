@@ -9,7 +9,7 @@ class Response{
     public function __invoke($action, $params)
     {
 
-        #var_dump($params['params']);
+        #var_dump($params['params']);exit;
 
         parse_str(file_get_contents('php://input'), $_POST);
         
